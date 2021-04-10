@@ -21,7 +21,7 @@ app.post('/users', (req, res) => {
     })
 })
 
-sequelize.sync({ force: true })
+sequelize.sync()
     .then(() => {
         console.log('🟢 连接已成功建立。')
         app.listen(3000, () => console.log('🚛 服务器已在端口 3000 上启动'))
